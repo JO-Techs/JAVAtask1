@@ -1,6 +1,6 @@
-# Personal Finance Tracker API
+# Finance Tracker API
 
-A RESTful API for managing personal finances built with Express.js and MongoDB.
+A RESTful API for managing finances built with Express.js and MongoDB.
 
 ## Setup
 
@@ -28,19 +28,19 @@ npm test     # Test all API endpoints
 
 ## API Endpoints
 
-### 🔐 Authentication
+###  Authentication
 - `POST /api/auth/register` - Create new user
 - `POST /api/auth/login` - Login user
 
-### 👤 User Management
+###  User Management
 - `GET /api/user/profile` - Get user profile (🔒 Auth required)
 - `PATCH /api/user/preferences` - Update user preferences (🔒 Auth required)
 
-### 📊 Dashboard
+###  Dashboard
 - `GET /api/summary` - Get account summary (🔒 Auth required)
   - Query params: `month`, `year`
 
-### 📄 Transactions
+###  Transactions
 - `GET /api/transactions` - Get transactions with filtering & pagination (🔒 Auth required)
   - Query params: `startDate`, `endDate`, `category`, `description`, `page`, `limit`
 - `POST /api/transactions` - Add new transaction (🔒 Auth required)
@@ -48,7 +48,7 @@ npm test     # Test all API endpoints
 - `DELETE /api/transactions/:id` - Delete transaction (🔒 Auth required)
 - `GET /api/transactions/export/csv` - Export transactions as CSV (🔒 Auth required)
 
-### 📈 Analytics
+###  Analytics
 - `GET /api/analytics/category-summary` - Get category totals for charts (🔒 Auth required)
   - Query params: `month`, `year`
 

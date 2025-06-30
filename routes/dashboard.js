@@ -5,7 +5,7 @@ const auth = require('../middleware/auth');
 
 const router = express.Router();
 
-// Get dashboard summary
+// Get dashboard
 router.get('/', auth, [
   query('month').optional().isInt({ min: 1, max: 12 }),
   query('year').optional().isInt({ min: 2000, max: 2100 })
